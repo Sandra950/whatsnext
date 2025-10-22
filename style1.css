@@ -1,0 +1,167 @@
+/* =============================
+   GENERAL PAGE STYLING
+============================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ffe6eb, #ffd1dc);
+  color: #333;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================
+   NAVBAR (Same Style as Home)
+============================= */
+.navbar {
+  background: linear-gradient(90deg, #ff7aa8, #c30052) !important;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(195, 0, 82, 0.2);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+  color: #fff0f6 !important;
+}
+
+.nav-link {
+  color: white !important;
+  margin-right: 15px;
+  font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.nav-link:hover {
+  color: #ffeef8 !important;
+  transform: scale(1.05);
+}
+
+/* =============================
+   CARD (Sign In Form Container)
+============================= */
+.card {
+  background: rgba(255, 245, 248, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(255, 100, 150, 0.25);
+}
+
+.card h3 {
+  color: #b3005a;
+  font-weight: 600;
+}
+
+/* =============================
+   FORM ELEMENTS
+============================= */
+.form-label {
+  color: #a10044;
+  font-weight: 500;
+}
+
+.form-control {
+  border: 2px solid #ffd6e2;
+  border-radius: 12px;
+  padding: 0.75em;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #b3005a;
+  box-shadow: 0 0 8px rgba(179, 0, 90, 0.2);
+}
+
+/* =============================
+   BUTTON STYLING
+============================= */
+.custom-btn {
+  background-color: #3d071b !important; /* Dark maroon */
+  color: #ffd700 !important; /* Golden yellow */
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 0.8em 1.8em !important;
+  font-weight: 600 !important;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(176, 48, 96, 0.4);
+}
+
+.custom-btn:hover {
+  background-color: #22040f !important;
+  color: #ffef8a !important;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(31, 1, 12, 0.6);
+}
+
+/* =============================
+   LINK STYLING
+============================= */
+.text-muted a,
+.link-warning {
+  color: #b3005a !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.text-muted a:hover,
+.link-warning:hover {
+  text-decoration: underline;
+  color: #a10044 !important;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 1.8rem !important;
+  }
+}
+
+/* =============================
+   ERROR MESSAGE (Scary Style)
+============================= */
+.error-message {
+  color: #ff0000; /* intense red */
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff4d4d;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  animation: pulseRed 1s infinite alternate;
+}
+
+/* Pulsing red glow */
+@keyframes pulseRed {
+  0% { text-shadow: 0 0 5px #ff4d4d; }
+  100% { text-shadow: 0 0 20px #ff0000; }
+}
+
+/* Shake effect when it appears */
+.error-message.show {
+  display: block;
+  animation: shake 0.4s ease, pulseRed 1s infinite alternate;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}

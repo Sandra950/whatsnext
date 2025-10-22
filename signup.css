@@ -1,0 +1,118 @@
+/* =============================
+   GENERAL PAGE STYLING
+============================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ffe6eb, #ffd1dc);
+  color: #333;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================
+   NAVBAR (Same Style as Home)
+============================= */
+.custom-navbar {
+  background: linear-gradient(90deg, #ff7aa8, #c30052);
+  padding: 1rem;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+  color: #fff0f6 !important;
+}
+
+.nav-link {
+  color: white !important;
+  margin-right: 15px;
+  font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.nav-link:hover {
+  color: #ffeef8 !important;
+  transform: scale(1.05);
+}
+
+/* =============================
+   SIGNUP FORM STYLING
+============================= */
+.signup-container {
+  background: rgba(255, 245, 248, 0.85);
+  padding: 2.5rem;
+  margin-top: 4rem;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(255, 100, 150, 0.2);
+}
+
+.signup-container h2 {
+  color: #b3005a;
+  font-weight: 600;
+}
+
+.signup-form label {
+  color: #a10044;
+}
+
+.signup-btn {
+  display: block;
+  width: 100%;
+  background-color: #3f0413;
+  color: #ffd700;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8em;
+  font-weight: 600;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(176, 48, 96, 0.4);
+}
+
+.signup-btn:hover {
+  background-color: #c94c7a;
+  color: #ffef8a;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(201, 76, 122, 0.6);
+}
+
+.error-message {
+  color: #ff0000;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff4d4d;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  animation: pulseRed 1s infinite alternate;
+}
+
+@keyframes pulseRed {
+  0% { text-shadow: 0 0 5px #ff4d4d; }
+  100% { text-shadow: 0 0 20px #ff0000; }
+}
+
+.error-message.show {
+  display: block;
+  animation: shake 0.4s ease, pulseRed 1s infinite alternate;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}

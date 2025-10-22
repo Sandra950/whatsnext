@@ -1,0 +1,166 @@
+/* ===========================
+   GENERAL PAGE STYLING
+=========================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ffe6eb, #ffd1dc);
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ===========================
+   NAVBAR STYLING
+=========================== */
+.custom-navbar {
+  background: linear-gradient(90deg, #ff7aa8, #c30052);
+  padding: 1rem;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+  color: #fff0f6 !important;
+}
+
+.nav-link {
+  color: white !important;
+  margin-right: 15px;
+  font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.nav-link:hover {
+  color: #ffeef8 !important;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   CENTERED CONTENT & LOGO
+=========================== */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation for logo */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===========================
+   "GET STARTED" BUTTON
+=========================== */
+.round-btn {
+  padding: 0.8em 2.5em;
+  background-color: #360618;  /* light maroon */
+  color: #ffd700;             /* golden-yellow text */
+  border: none;
+  border-radius: 30px;        /* rounded rectangle */
+  font-weight: 600;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(176, 48, 96, 0.4);
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  display: inline-block;
+  text-align: center;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Button hover & focus states */
+.round-btn:hover {
+  background-color: #360618;   /* brighter maroon */
+  color: #ffef8a;              /* lighter gold text */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(201, 76, 122, 0.6);
+}
+
+.round-btn:focus,
+.round-btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Gentle glow animation for button */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 6px 15px rgba(176, 48, 96, 0.4); }
+  50% { box-shadow: 0 6px 25px rgba(176, 48, 96, 0.6); }
+}
+
+/* ===========================
+   WELCOME MESSAGE ANIMATION
+=========================== */
+.welcome-container {
+  margin-top: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.welcome-message {
+  display: inline-block;
+  animation: moveText 15s linear infinite;
+  font-size: 1.5rem;
+  color: #b3005a;
+}
+
+/* Smooth scrolling text */
+@keyframes moveText {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ===========================
+   UGANDA ANTHEM SECTION
+=========================== */
+.anthem {
+  margin: 3rem auto;
+  width: 80%;
+  max-width: 700px;
+  background: rgba(255, 245, 248, 0.8);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(255, 100, 150, 0.2);
+  color: #a10044;
+  animation: fadeIn 3s ease-in;
+}
+
+.anthem h2 {
+  font-weight: 600;
+  color: #b3005a;
+  margin-bottom: 1.5rem;
+}
+
+.anthem p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+/* Fade-in animation for anthem section */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
