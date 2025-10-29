@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let users = JSON.parse(localStorage.getItem("users")) || [];
     if (!Array.isArray(users)) users = [];
 
-    // Match user credentials
+    // Match user credential
     const matchedUser = users.find(
       (user) => user.email === email && user.password === password
     );

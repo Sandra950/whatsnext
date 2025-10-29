@@ -20,7 +20,7 @@ form.addEventListener("submit", function (e) {
   // Get existing users or create empty array
   const users = JSON.parse(localStorage.getItem("users")) || [];
 
-  // Check if user already exists
+  // Check if b user already exists
   const existingUser = users.find(user => user.email === email);
   if (existingUser) {
     alert("⚠️ Email already registered! Please sign in instead.");

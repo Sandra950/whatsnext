@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }, 1000);
 
-    // Edit task
+    // Edivt task
     li.querySelector(".edit-btn").addEventListener("click", () => {
       const newName = prompt("Edit your task:", task.name);
       if (newName) {
